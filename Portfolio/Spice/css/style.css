@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amarante&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header and Navigation */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-family: "Qwigley", cursive;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orangered;
+}
+
+/* Background Image and Centered Text */
+#background {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#background img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: "Amarante", serif;
+}
+
+/* Search Section */
+.search {
+    padding: 70px 20px 50px;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    max-width: 600px;
+    padding: 15px;
+}
+
+/* Products Section */
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.box {
+    border: 2px solid black;
+    border-radius: 20px;
+    display: inline-block;
+    width: 200px;
+    height: 250px; /* Ensure consistent height for all boxes */
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.box img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensure images cover the area without distortion */
+}
+
+h4 {
+    padding: 10px;
+}
+
+.box:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* About Section */
+.about {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+}
+
+.p1 {
+    padding: 15px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.contact:hover {
+    color: orangered;
+}
+
+.para {
+    padding: 15px;
+    color: gray;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        margin-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .search {
+        padding: 50px 10px 30px;
+    }
+
+    .products .box {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .centered-text {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-text {
+        font-size: 2em;
+    }
+
+    input {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
